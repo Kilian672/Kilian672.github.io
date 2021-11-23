@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Epidemic Model Designer - Development Guide</title>
+		<style>
+			.code {
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Epidemic Model Designer - Development Guide</h1>
+		<h2>Installation</h2>
+		<ul>
+			<li>
+				Make sure to have Visual Studio Code and Node installed (which you have
+				if you are already compiling javascript with VS Code)
+			</li>
+			<li>Start VS Code and open a new terminal: Terminal &gt; New Terminal</li>
+			<li>
+				Enter <span class="code">npm install</span> and wait a few minutes.
+			</li>
+			<li>
+				Open the file package.json, run
+				<span class="code">npm list --depth 0</span> and make sure that the
+				version numbers coincide with the ones in the development dependencies
+				section.
+			</li>
+
+			<li>Close the terminal.</li>
+			<li>
+				Use <span class="code">Ctrl+Shift+P</span> to open the search and type
+				<span class="code">Ctrl+Shift+X</span> to open the extension tab and
+				install the following extensions.
+				<ul>
+					<li>Debugger for Chrome</li>
+					<li>ESLint</li>
+					<li>Prettier - Code formatter</li>
+				</ul>
+			</li>
+			<li>
+				Use <span class="code">Ctrl+Shift+P</span> to open the search and type
+				<span class="code">Preferences: Open Settings (JSON)</span>.
+			</li>
+			<li>
+				Replace the contents with the contents of
+				<span class="code">settings.json</span> and save.
+			</li>
+		</ul>
+		<h2>
+			Usage
+		</h2>
+		<h3>Folder Structure</h3>
+		<ul>
+			<li>
+				Open this folder in VS code (drag &amp; drop or File &gt; Open Folder).
+			</li>
+			<li>
+				The base folder contains all required configuration files. Only change
+				after alignment for consistency.
+			</li>
+			<li>
+				The folder <span class="code">src</span> contains the javascript source
+				code. The entry script is fixed to <span class="code">index.js</span>.
+			</li>
+			<li>
+				The folder <span class="code">static</span> contains the static website
+				components, in particular the html and the stylesheets.
+			</li>
+			<li>
+				The folder <span class="code">prod</span> contains the files ready for
+				publishing (once generated).
+			</li>
+		</ul>
+		<h3>Development</h3>
+		<ul>
+			<li>
+				Open a new terminal and run <span class="code">npm run dev</span>. This
+				will start a local server (and keep running).
+			</li>
+			<li>
+				Hit <span class="code">F5</span> to start debugging. Full functionality
+				including automatic reruns, breakpoints and stepping is available.
+			</li>
+			<li>Happy Coding!</li>
+			<li>
+				When the functionality meets your expectations stop debugging, and
+				further the local server in the terminal with <span>Ctrl+C</span> (and
+				confirm).
+			</li>
+		</ul>
+		<h3>Build (Stage)</h3>
+		<ul>
+			<li>
+				For testing and debugging the code after optimisation (bundling, dead
+				code removal and others) run <span class="code">npm run build</span>.
+			</li>
+			<li>
+				Using the local server for debugging is the same as in development. Make
+				sure to test properly, in particular event handlers.
+			</li>
+		</ul>
+		<h3>Production</h3>
+		<ul>
+			<li>
+				After successful testing use
+				<span class="code">npm run prod</span>
+				to produce the output fies.
+			</li>
+			<li>
+				The output files can be found in the folder
+				<span class="code">prod</span>.
+			</li>
+		</ul>
+	</body>
+</html>
