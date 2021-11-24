@@ -15,7 +15,7 @@ const info = {
 	source: '',
 };
 
-info.check = 'testConfirm the name';
+info.check = 'Confirm the name';
 info.Delete = 'Delete the active';
 info.rename = 'Click this button to Rename';
 info.in = 'Create a specialArrow in';
