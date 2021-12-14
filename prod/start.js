@@ -38,5 +38,11 @@ function callName(req, res) {
 	} )
 }
 
+window.addEventListener("load", function() {
+    let schaltflaeche1 = document.getElementById("btn1");
+    schaltflaeche1.addEventListener("click", function() {
+        alert("angeklickt")
+    }, false);
+} );
 // save code as start.js
 
